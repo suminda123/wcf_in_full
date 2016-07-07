@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Vehicles";
+}
+
+<div class="body-content">
+    <div class="row">
+        <h1 class="page-header">Vehicles</h1>
+    </div>
+    <div class="row">
+        <form id="vehicleForm" class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="Make">Make</label>
+                <input type="text" class="form-control" id="Make" name="Make" placeholder="Make" required>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="Description">Description</label>
+                <input type="text" class="form-control" id="Description" name="Description" placeholder="Description" required>
+            </div>
+            <div class="form-group">
+                <a href="#" id="addVehicle" class="btn btn-primary">Add New</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="row row-table ui-data">
+        <div class="table-responsive table-hover">
+            <table id="vehicletable" class="table">
+                <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="ui-loading">
+                        loading........
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="dataConfirmModal" class="modal" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="dataConfirmLabel">Please Confirm</h3>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button><a class="btn btn-primary" id="dataConfirmOK" data-dismiss="modal">OK</a>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="../../Scripts/appscripts/Vehicle.Manage.js"></script>
+}

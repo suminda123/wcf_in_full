@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../VehicleApp.Contracts.csproj",
+      "bin": {
+        "assembly": "../../obj/{configuration}/VehicleDataApp.Contracts.dll",
+        "pdb": "../../obj/{configuration}/VehicleDataApp.Contracts.pdb"
+      }
+    }
+  }
+}
